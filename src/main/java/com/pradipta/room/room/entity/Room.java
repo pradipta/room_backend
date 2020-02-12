@@ -20,7 +20,7 @@ public class Room {
     private String roomName;
     private String roomDescription;
     @OneToMany(targetEntity = User.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "room_user_fk", referencedColumnName = id)
+    @JoinColumn(name = "room_user_fk", referencedColumnName = "username")
     private List<User> users;
     private Boolean isActive = true;
 }
